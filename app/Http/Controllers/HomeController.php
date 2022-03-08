@@ -6,9 +6,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __invoke() //invoke es para administrar una única ruta
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-    // return view('welcome');
-    return view('home');
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }
