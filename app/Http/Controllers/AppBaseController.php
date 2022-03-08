@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+/* use Response; */
 use InfyOm\Generator\Utils\ResponseUtil;
-use Response;
+use Illuminate\Http\Response;
 
 /**
  * @SWG\Swagger(
@@ -16,6 +17,7 @@ use Response;
  * This class should be parent class for other API controllers
  * Class AppBaseController
  */
+
 class AppBaseController extends Controller
 {
     public function sendResponse($result, $message)
