@@ -1,7 +1,8 @@
-@extends('layouts.app')
+
+@extends('layouts.plantilla')
+
+@section('title','Home')
 
 @section('content')
-    <div class="container-fluid">
-        <h1 class="text-black-50">You are logged in!</h1>
-    </div>
+    <h1>Bienvenido a la página principal</h1>
 @endsection
